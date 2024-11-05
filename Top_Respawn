@@ -1,0 +1,34 @@
+--(TOP_Revive_Script)--
+--(By: helpguestslikeme)--
+--(Version 2.1)--
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Thank You For Using This Script!";
+	Text = "Created by: helpguestslikeme#1470";
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "TOP Reset";
+        Text = "How to use:";
+        })
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Keybinds";
+        Text = "J to revive self. P to teleport out.";
+        })
+
+local lplr = game:GetService("Players").LocalPlayer
+local mouse = lplr:GetMouse()
+
+mouse.KeyDown:connect(function(key)
+    if key == "p" then
+        game:GetService("TweenService"):Create(lplr.Character.HumanoidRootPart, TweenInfo.new(0.3, Enum.EasingStyle.Linear), {CFrame = CFrame.new(100, 100, 100)}):Play()
+    end
+    end)
+
+mouse.KeyDown:connect(function(key)
+    if key == "j" then
+        local action = lplr.Character.SuperAction
+        action:Destroy()
+    end
+    end)
