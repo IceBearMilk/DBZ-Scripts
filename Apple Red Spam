@@ -1,0 +1,3 @@
+TimesRed = 10
+TimexD = 0.000001
+loadstring(game:HttpGet("https://raw.githubusercontent.com/malumsw/FS/main/rs", true))()
